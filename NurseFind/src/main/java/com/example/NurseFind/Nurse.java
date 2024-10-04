@@ -1,48 +1,51 @@
 package com.example.NurseFind;
 
 public class Nurse {
-	private String nombre;
-	private String color;
-	private int edad;
-	private String profesionalidad;
+	private String name;
+	private String password;
+	private int age;
+	private String speciality;
+	private int idNurse;
+	private  static int totalNurse;
 
-	public Nurse(String nombre, String color,int edad, String profesionalidad) {
-		this.nombre = nombre;
-		this.color = color;
-		this.edad=edad;
-		this.profesionalidad=profesionalidad;
+	public Nurse(String name, String password,int edad, String profesionalidad, int idNurse) {
+		this.name = name;
+		this.password = password;
+		this.age=edad;
+		this.speciality=profesionalidad;
+		this.idNurse=idNurse;
 	}
 
-	public int getEdad() {
-		return edad;
+	public int getAge() {
+		return age;
 	}
 
-	public void setEdad(int edad) {
-		this.edad = edad;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public String getSector() {
-		return profesionalidad;
+	public String getSpeciality() {
+		return speciality;
 	}
 
-	public void setSector(String profesionalidad) {
-		this.profesionalidad = profesionalidad;
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
 	}
 
-	public String getColor() {
-		return color;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

@@ -21,16 +21,16 @@ public class NurseController {
 
 	public NurseController() {
 		super();
-		nurses.add(new Nurse("Noemi", "Azul", 21, "Farmacoterapia"));
-		nurses.add(new Nurse("Alex" , "Verde", 19,"Oftalmología"));
-		nurses.add(new Nurse("Dafne", "Amarillo", 20, "Dermatología"));
+		nurses.add(new Nurse("Noemi", "Azul", 21, "Farmacoterapia", 1));
+		nurses.add(new Nurse("Alex" , "Verde", 19,"Oftalmología",2));
+		nurses.add(new Nurse("Dafne", "Amarillo", 20, "Dermatología", 3));
 	}
 
 	// The method
 	@GetMapping("/name/{name}")
 	public ResponseEntity<Nurse> findByName(@PathVariable  String name) {
 		for (Nurse nurse : nurses) {
-			if (nurse.getNombre().equals(name)) {
+			if (nurse.getName().equals(name)) {
 				return ResponseEntity.ok(nurse);
 				
 			}
